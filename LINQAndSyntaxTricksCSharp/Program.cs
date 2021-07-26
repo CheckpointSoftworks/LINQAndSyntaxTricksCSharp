@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace LINQAndSyntaxTricksCSharp
 {
@@ -10,10 +11,6 @@ namespace LINQAndSyntaxTricksCSharp
             //-------------------------------------------------------------------------
             //WITHOUT LINQ ------------------------------------------------------------
 
-            //Reverse a string in C#:
-
-            //Reverse an Integer in C#:
-
             //Check strings for equality:
 
             //Check strings for equality to int:
@@ -22,7 +19,15 @@ namespace LINQAndSyntaxTricksCSharp
 
             //Check string for equality to a float:
 
-            //Loop over the values of a primitive array of integers using a for loop:
+            //Check int for equality to a double:
+
+            //Check int for equality to a float:
+
+            //Reverse a string in C#:
+
+            //Reverse an Integer in C#:
+
+            //Loop over the values of a primitive array of integers (using a regular for loop):
 
             //Loop over the values of a List<int> using a foreach loop:
 
@@ -47,7 +52,7 @@ namespace LINQAndSyntaxTricksCSharp
             Array.Copy(source, target, 5);
             foreach (int value in target)
             {
-                Console.WriteLine(value);
+                Console.Write(value + " ");
             }
 
             //Copy a List to another List: BY VALUES NOT BY REFERENCE
@@ -55,8 +60,20 @@ namespace LINQAndSyntaxTricksCSharp
             List<Employee> copy = new List<Employee>(emplist);
             foreach(var e in copy)
             {
-                Console.WriteLine(e.FirstName);
+                Console.Write(e.FirstName + " ");
             }
+
+            //Copy a primitive array to a List (by values and order):
+            int[] primarray = new int[5] { 5, 6, 7, 8, 9 };
+            List<int> primtolist = new List<int>(primarray);
+            Console.WriteLine(String.Join(",", primtolist));
+            //OR: 
+            int[] primarray2 = { 1, 2, 3, 4, 5 };
+            List<int> primtolist2 = primarray2.ToList();
+            Console.WriteLine(String.Join(",", primtolist2));
+
+
+            //Copy a List to a primitive array (by values and order):
 
 
 
@@ -64,21 +81,91 @@ namespace LINQAndSyntaxTricksCSharp
             //--------------------------------------------------------------------------
             //WITH LINQ ----------------------------------------------------------------
 
-            //Check two primitive arrays for equality (all items the same and in same order);
+            //Get the First element of a sequence: 
+            List<double> doubles1 = new List<double> { 2.0, 2.1, 2.2, 2.3 };
+            double first = doubles1.First();
+            Console.WriteLine("first was equal to: " + first);
+
+            //Get the Last element of a sequence: 
+            List<double> doubles2 = new List<double> { 2.0, 2.1, 2.2, 2.3 };
+            double last = doubles2.Last();
+            Console.WriteLine("last was equal to: " + last);
+
+            //Get a specific element of a sequence based on its location: 
+            List<double> doubles3 = new List<double> { 2.0, 2.1, 2.2, 2.3 };
+            double secondposition = doubles3.ElementAt(2);
+            Console.WriteLine("secondposition was equal to: " + secondposition);
+
+            //Get a Single element from a sequence, and return an exception if there is more than 1 element in that sequence.
+            //(It is primarily used to convert a sequence to a Single.)  
+            List<double> doubles4 = new List<double> { 3.0 };
+            double single = doubles4.Single();
+            Console.WriteLine("single was equal to: " + single);
+
+            //Conditionally extract the first single element from a sequence, based on some predicate of true or false:
+            //(Throw an exception if no element matching the predicate was found)
+            List<double> doubles5 = new List<double> { 2.0, 2.1, 2.2, 2.3 };
+            double firstpredicate = doubles5.First(val => val < 2.2);
+            Console.WriteLine("firstpredicate was equal to: " + firstpredicate);
+
+            //Conditionally extract the first single element from a sequence, based on some predicate of true or false:
+            //(Throw an exception if no element matching the predicate was found)
+            List<double> doubles6 = new List<double> { 2.0, 2.1, 2.2, 2.3 };
+            double lastpredicate = doubles5.Last(val => val > 2.2);
+            Console.WriteLine("lastpredicate was equal to: " + lastpredicate);
+
+            //Check two primitive arrays for equality (all items the same and in same order):
+            int[] firstarray = { 1, 2, 3, 4, 5 };
+            int[] secondarray = { 1, 2, 3, 4, 5 };
+            if (Enumerable.SequenceEqual(firstarray, secondarray))
+            {
+                Console.WriteLine("firstarray and secondarray were equal by value and order.");
+            }
+            else
+            {
+                Console.WriteLine("firstarray and secondarray were not equal by value and order.");
+            }
 
             //Check two List for equality (all items the same and in same order):
+            List<int> someints = new List<int>() { 5,6,7,8,9 } ;
+            List<int> someints2 = new List<int>() { 5, 6, 7, 8, 10 };
+            if(Enumerable.SequenceEqual(someints,someints2))
+            {
+                Console.WriteLine("someints was equal (by value and order) to someints2");
+            }
+            else
+            {
+                Console.WriteLine("someints was not equal (by value and order) to someints2");
+            }
+
+            //Check two Lists for equality, ORDER DOES NOT MATTER:
+            List<int> x = new List<int>() { 3, 5, 3, 2, 7 };
+            List<int> y = new List<int>() { 3, 5, 3, 7, 2 };
+            bool isEqual = Enumerable.SequenceEqual(x.OrderBy(e => e), y.OrderBy(e => e));
+            if (isEqual)
+            {
+                Console.WriteLine("Lists are Equal");
+            }
+            else
+            {
+                Console.WriteLine("Lists are not Equal");
+            }
 
             //Find all elements of a List1 which are NOT in List2:
 
-            //Find all elements of a List<int> greater than a condition:
+            //Find all elements of a List<int> greater than a conditional:
 
-            //Find all Employees with an Age greater than 55:
+            //Find all Employees from a List with an Age greater than 55:
+
 
             //Find all Employees with an Age between 13 to 19:
 
+
             //Find all Employees with a LastName less than 'M' (disregard case)
 
+
             //Find all Employees with a LastName greater than 'M' (disregard case)
+
 
 
         }

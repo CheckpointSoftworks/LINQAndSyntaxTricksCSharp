@@ -1,0 +1,13 @@
+C:\Users\Ian\source\repos\LINQAndSyntaxTricksCSharp\LINQAndSyntaxTricksCSharp\bin\Debug\netcoreapp3.1\LINQAndSyntaxTricksCSharp.exe
+C:\Users\Ian\source\repos\LINQAndSyntaxTricksCSharp\LINQAndSyntaxTricksCSharp\bin\Debug\netcoreapp3.1\LINQAndSyntaxTricksCSharp.deps.json
+C:\Users\Ian\source\repos\LINQAndSyntaxTricksCSharp\LINQAndSyntaxTricksCSharp\bin\Debug\netcoreapp3.1\LINQAndSyntaxTricksCSharp.runtimeconfig.json
+C:\Users\Ian\source\repos\LINQAndSyntaxTricksCSharp\LINQAndSyntaxTricksCSharp\bin\Debug\netcoreapp3.1\LINQAndSyntaxTricksCSharp.runtimeconfig.dev.json
+C:\Users\Ian\source\repos\LINQAndSyntaxTricksCSharp\LINQAndSyntaxTricksCSharp\bin\Debug\netcoreapp3.1\LINQAndSyntaxTricksCSharp.dll
+C:\Users\Ian\source\repos\LINQAndSyntaxTricksCSharp\LINQAndSyntaxTricksCSharp\bin\Debug\netcoreapp3.1\LINQAndSyntaxTricksCSharp.pdb
+C:\Users\Ian\source\repos\LINQAndSyntaxTricksCSharp\LINQAndSyntaxTricksCSharp\obj\Debug\netcoreapp3.1\LINQAndSyntaxTricksCSharp.csprojAssemblyReference.cache
+C:\Users\Ian\source\repos\LINQAndSyntaxTricksCSharp\LINQAndSyntaxTricksCSharp\obj\Debug\netcoreapp3.1\LINQAndSyntaxTricksCSharp.AssemblyInfoInputs.cache
+C:\Users\Ian\source\repos\LINQAndSyntaxTricksCSharp\LINQAndSyntaxTricksCSharp\obj\Debug\netcoreapp3.1\LINQAndSyntaxTricksCSharp.AssemblyInfo.cs
+C:\Users\Ian\source\repos\LINQAndSyntaxTricksCSharp\LINQAndSyntaxTricksCSharp\obj\Debug\netcoreapp3.1\LINQAndSyntaxTricksCSharp.csproj.CoreCompileInputs.cache
+C:\Users\Ian\source\repos\LINQAndSyntaxTricksCSharp\LINQAndSyntaxTricksCSharp\obj\Debug\netcoreapp3.1\LINQAndSyntaxTricksCSharp.dll
+C:\Users\Ian\source\repos\LINQAndSyntaxTricksCSharp\LINQAndSyntaxTricksCSharp\obj\Debug\netcoreapp3.1\LINQAndSyntaxTricksCSharp.pdb
+C:\Users\Ian\source\repos\LINQAndSyntaxTricksCSharp\LINQAndSyntaxTricksCSharp\obj\Debug\netcoreapp3.1\LINQAndSyntaxTricksCSharp.genruntimeconfig.cache
